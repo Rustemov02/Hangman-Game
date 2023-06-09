@@ -32,9 +32,9 @@ const KEYS = [
 export default function Keyboard({ activeLetters, inactiveLetters, addGuessedLetter , disabled = false }) {
 
     return (
-        <div style={{
-            // border : "solid red 1px",
-            width: '90%',
+        <div style={{ 
+            margin : '0 auto',
+            width: '100%',
             minWidth: '400px',
             display: 'flex',
             flexDirection: 'row',
@@ -46,11 +46,10 @@ export default function Keyboard({ activeLetters, inactiveLetters, addGuessedLet
             {KEYS.map(key => {
                 const isActive = activeLetters.includes(key)
                 const isInactive = inactiveLetters.includes(key)
+
                 return <button key={key} disabled={isInactive || isActive || disabled}
                     onClick={() => {
-                        addGuessedLetter(key)
-                        // console.log("deneme " + key.toUpperCase())
-                        console.log('tested!')
+                        addGuessedLetter(key)  
                     }} className={`${styles.btn} ${isActive ? styles.active : ''} ${isInactive ? styles.inactive : ''}`}>{key}</button>
             })}
         </div>

@@ -70,7 +70,7 @@ export default function App() {
       flexDirection: 'column',
       gap: '2rem',
       margin: '0 auto',
-      alignItems: "center"
+      alignItems: "center",
     }}>
       <div style={{ textAlign: 'center', fontSize: '2rem' }}>
         {isWinner && "Winner! - Refresh to try again"}
@@ -78,7 +78,7 @@ export default function App() {
       </div>
       <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
       <HangmanWord reveal={isLoser} guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
-      <div style={{ alignSelf: 'stretch' }}>
+      <div>
         <Keyboard
           disabled={isLoser || isWinner}
           activeLetters={guessedLetters.filter(letter => wordToGuess.includes(letter))}
