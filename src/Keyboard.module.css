@@ -1,0 +1,22 @@
+.btn {
+    font-size: 30px;
+    padding: 0px 8px;
+    height: fit-content;
+    cursor: pointer;
+    padding: 12px 10px;
+    border : solid black 3px;
+    background : none;
+    text-transform: uppercase;
+}
+
+.btn.active{
+    background-color: hsl(200, 100% , 50%);
+    color : white;
+}
+.btn.inactive{
+    opacity: .3;
+}
+.btn:hover:not(:disabled),
+.btn:focus:not(:disabled) {
+    background-color: hsl(200, 100%, 75%);
+}
